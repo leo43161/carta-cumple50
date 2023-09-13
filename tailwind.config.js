@@ -9,7 +9,12 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        "sans": ["Roboto", ...defaultTheme.fontFamily.sans]
+        "sans": ["Montserrat", ...defaultTheme.fontFamily.sans]
+      },
+      colors: {
+        'primary': '#FDCEDF',
+        'secondary': '#FEE6E2',
+        'green': '#96A280',
       }
     },
     fontSize: {
@@ -27,10 +32,6 @@ module.exports = {
       'title': ['Alex Brush'],
       'body': ['Arial']
     },
-    colors: {
-      'primary' : '#FDCEDF',
-      'secondary' : '#FEE6E2'
-    }
   },
   plugins: [],
 }
