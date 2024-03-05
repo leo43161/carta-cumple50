@@ -12,9 +12,9 @@ module.exports = {
         "sans": ["Montserrat", ...defaultTheme.fontFamily.sans]
       },
       colors: {
-        'primary': '#FDCEDF',
-        'secondary': '#FEE6E2',
-        'green': '#96A280',
+        'primary': '#BF7A80',
+        'secondary': '#E3D0CA',
+        'golden': '#A6855D',
       }
     },
     fontSize: {
@@ -27,10 +27,13 @@ module.exports = {
       '5xl': '3.052rem',
       '6xl': '4.052rem',
       '7xl': '5.052rem',
+      '8xl': '6.052rem',
+      '9xl': '7.052rem',
     },
     fontFamily: {
-      'title': ['Alex Brush'],
-      'body': ['Arial']
+      'title': ['Boogaloo'],
+      'body': ['Arial'],
+      'elegant': ['Great Vibes']
     },
   },
   plugins: [],
