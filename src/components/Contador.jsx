@@ -4,7 +4,7 @@ import Countdown from 'react-countdown';
 const CountDown = ({ hours, minutes, seconds, completed,days }) => {
     if (completed) {
         // Render a completed state
-        return <h1 className="font-title">Es mi cumpleaños!</h1>;
+        return <h1 className="font-title text-center text-4xl">Es mi cumpleaños!</h1>;
     } else {
         // Render a countdown
         return <div className="flex justify-around">
@@ -47,7 +47,7 @@ const CountDown = ({ hours, minutes, seconds, completed,days }) => {
 export default function Contador() {
     return (
         <Countdown
-            date={'2024-03-10T21:00:00'}
+            date={'2024-03-30T21:00:00'}
             renderer={CountDown}
         />
     )

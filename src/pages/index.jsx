@@ -1,6 +1,7 @@
 import Button from "@/components/Button";
 import Contador from "@/components/Contador";
 import { GiPartyPopper } from 'react-icons/gi';
+import Head from 'next/head'
 /* import { PiShirtFoldedFill, PiDressBold, PiGift } from 'react-icons/pi';
 import { MdOutlineKeyboardArrowDown } from 'react-icons/md';
 import { FaCamera } from "react-icons/fa"; */
@@ -19,7 +20,8 @@ export default function Index() {
         const { nombre, asistencia, mensaje } = message;
 
         const mensajeWhatsApp = `Hola, soy ${nombre} y quiero confirmar mi asistencia a tu fiesta. Mi respuesta es: ${asistencia}. Además, quiero decirte las siguientes palabras: ${mensaje}`;
-        const numeroDestino = "5493813343270"; // Reemplaza con el número de WhatsApp de destino, incluyendo el prefijo internacional
+        //const numeroDestino = "5493813343270"; // Reemplaza con el número de WhatsApp de destino, incluyendo el prefijo internacional
+        const numeroDestino = "5491158359408"; // Reemplaza con el número de WhatsApp de destino, incluyendo el prefijo internacional
 
         const url = `https://wa.me/${numeroDestino}?text=${encodeURIComponent(
             mensajeWhatsApp
@@ -33,6 +35,9 @@ export default function Index() {
         setMessage({ ...message, [name]: value });
     };
     return (<>
+        <Head>
+            <title>¡Feliz Cumpleaños Beatriz!</title>
+        </Head>
         <div className="md:w-3/6 md:mx-auto">
             <header className="flex flex-col items-center text-black relative w-auto h-[75vh] lg:h-[85vh] overflow-hidden bg-secondary">
                 <img src="img/background.jpg" alt="Habitación" className="absolute inset-0 w-full h-full object-cover z-[1] contrast-125" />
@@ -67,11 +72,11 @@ export default function Index() {
                         <GiPartyPopper className="text-primary bounce-in" size={120} />
                     </div>
                     <h1 className="text-6xl font-title">¡Fiesta!</h1>
-                    <p className="text-xl text-center mb-5">¡Te espero el <span className="text-golden font-bold text-xl">Viernes 13 de Octubre a las 21:00 hs</span> para festejar este gran momento de mi vida!<br></br>
-                        <span className="text-golden font-bold text-xl">Atardecer Del Campo, Manuela Pedraza, Tucumán</span><br></br>
+                    <p className="text-xl text-center mb-5">¡Te espero el <span className="text-golden font-bold text-xl">Sabado 30 de Marzo a las 21:00 hs</span> para festejar este gran momento de mi vida!<br></br>
+                        <span className="text-golden font-bold text-xl">Sociedad De Fomento 12 De Diciembre, C. 842 1985, B1881 San Francisco Solano, Provincia de Buenos Aires</span><br></br>
                         ¡Clickea en el botón de abajo y encontrá las indicaciones para llegar, nos vemos!😉
                     </p>
-                    <a href="https://www.google.com/maps/place/Atardecer+Del+Campo/@-27.2226471,-65.3660536,17z/data=!4m14!1m7!3m6!1s0x9423b3e3d249ed0f:0x649ab8fbc28c8122!2sAtardecer+Del+Campo!8m2!3d-27.2226519!4d-65.3634787!16s%2Fg%2F11f3vksp53!3m5!1s0x9423b3e3d249ed0f:0x649ab8fbc28c8122!8m2!3d-27.2226519!4d-65.3634787!16s%2Fg%2F11f3vksp53?entry=ttu">
+                    <a href="https://www.google.com/maps/place/Sociedad+De+Fomento+12+De+Diciembre/@-34.7747008,-58.3062643,19.25z/data=!4m6!3m5!1s0x95a32c6a8018b515:0xe047b6b57854fcb9!8m2!3d-34.7746682!4d-58.3060957!16s%2Fg%2F11hyl5j_8w?entry=ttu">
                         <Button>¡Cómo llegar!</Button>
                     </a>
                 </div>
@@ -121,9 +126,9 @@ export default function Index() {
             {/* ASISTENCIA */}
             <div className="py-14 px-8 bg-primary">
                 <div className="flex justify-center items-center flex-col">
-                    <h1 className="text-6xl font-title text-center">¡Confirma tu Asistencia!</h1>
+                    <h1 className="text-6xl font-title text-center mb-4">¡Confirma tu Asistencia!</h1>
                     <p className="text-xl text-center mb-3">
-                        ¡Haznos saber si podrás asistir antes del <strong>3 de octubre</strong>!
+                        ¡Haznos saber si podrás asistir antes del <strong>25 de Marzo</strong>!
                     </p>
                     <p className="text-xl  text-center mb-3">Puedes confirmar tu asistencia enviando un mensaje al número <a href="tel:+34678567876" className="font-bold">1158359408</a></p>
                     <p className="text-xl mb-4 text-center">O también, puedes llenar el siguiente formulario:</p>
@@ -134,9 +139,7 @@ export default function Index() {
                                 name="nombre"
                                 value={message.nombre}
                                 onChange={handleInputChange}
-                                className="bg-gray-50 border border-gray-300 
-                    text-gray-900 focus:ring-blue-500 
-                    focus:border-blue-500 block w-full p-2.5 text-lg mb-4"
+                                className="bg-gray-50 border border-gray-300 text-gray-900 focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 text-lg mb-4"
                                 placeholder="Nombre y Apellido"
                                 required
                             />
@@ -144,9 +147,7 @@ export default function Index() {
                                 name="asistencia"
                                 value={message.asistencia}
                                 onChange={handleInputChange}
-                                className="bg-gray-50 border border-gray-300 
-                    text-gray-900 focus:ring-blue-500 
-                    focus:border-blue-500 block w-full p-2.5 text-lg mb-4"
+                                className="bg-gray-50 border border-gray-300 text-gray-900 focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 text-lg mb-4"
                             >
                                 <option value="Si voy a asistir">¡Sí, voy a asistir!</option>
                                 <option value="No podré asistir">¡No podré asistir!</option>
