@@ -3,7 +3,7 @@ import { BsPlayFill, BsPauseFill } from 'react-icons/bs';
 
 function MusicPlayer() {
     const audioRef = useRef(null);
-    const [isPlaying, setIsPlaying] = useState(false);
+    const [isPlaying, setIsPlaying] = useState(true);
 
     const playPauseToggle = () => {
         if (isPlaying) {
@@ -35,7 +35,10 @@ function MusicPlayer() {
                 onTimeUpdate={handleTimeUpdate}
                 autoPlay={true}
             ></audio>
-            <div className="flex items-center gap-3">
+            <div className="flex items-center gap-3 relative ">
+                <button className="shrink-0 motion-safe:animate-ping absolute inline-flex" onClick={playPauseToggle}>
+                    {isPlaying ? <BsPauseFill size={35} /> : <BsPlayFill size={35} />}
+                </button>
                 <button className="shrink-0" onClick={playPauseToggle}>
                     {isPlaying ? <BsPauseFill size={35} /> : <BsPlayFill size={35} />}
                 </button>
