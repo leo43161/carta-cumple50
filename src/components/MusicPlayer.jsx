@@ -31,7 +31,7 @@ function MusicPlayer() {
         <div className="bg-primary text-center px-5 py-3">
             <audio
                 ref={audioRef}
-                src="music/A Thousand Years.mp3"
+                src="music/Enganchado Cuarteto 2024.mp3"
                 onTimeUpdate={handleTimeUpdate}
                 autoPlay={true}
             ></audio>
